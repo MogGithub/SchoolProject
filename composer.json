@@ -4,10 +4,11 @@
     "type":        "project",
     "description": "This is a project to help students learn tests",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": { "MMI\\": "src/" }
     },
     "require": {
-        "silex/silex": "^2.0"
+        "symfony/symfony": "^3.1",
+        "sensio/framework-extra-bundle": "^3.0"
     },
     "require-dev": {
     }
