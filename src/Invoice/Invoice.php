@@ -30,6 +30,17 @@ class Invoice
         return count($this->lines);
     }
 
+    public function getFormattedDescriptions()
+    {
+        $res = '';
+
+        foreach ($this->lines as $line) {
+            $res .= $line->getDescription() . ' : ' . $line->getAmount() . "\n";
+        }
+
+        return $res;
+    }
+
     /**
      * @return float
      */

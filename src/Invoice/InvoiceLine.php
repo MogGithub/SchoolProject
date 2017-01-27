@@ -28,9 +28,13 @@ class InvoiceLine
         return $this->description;
     }
 
+    /**
+     * 20% / 5% ...
+     * @param int $vat
+     */
     public function setVat($vat)
     {
-        $this->vat = $vat;
+        $this->vat = $vat/100 + 1;
     }
 
     public function calculateTotal()
